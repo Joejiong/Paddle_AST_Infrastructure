@@ -81,4 +81,4 @@ test description: cd test run
 	bash run.sh ../../../model/input/class_cnn.py ../../../output/class_cnn_transfered.py
 
 ## TODO and Problems:
-- code refactory
+- currently we support four AST node operations "name",  "add",  “delete“,  "rename"，but add operation has some problems, because paddle source code usually adds param with default value, so it is redundant to add parameter with default value. Therefore we consider eliminating this operation.
