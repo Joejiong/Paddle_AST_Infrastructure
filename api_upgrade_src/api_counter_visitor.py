@@ -23,7 +23,7 @@ from api_upgrade_src.upgrade_models_api_utils import save_counter_dict
 
 
 COUNTER_DICT_PATH = './api_upgrade_src/dict/counter.dict'
-COUNTER_OUTPUT_PATH_ORI = '/work/debug/baidu/personal-code/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+COUNTER_OUTPUT_PATH_ORI = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
 
 
 

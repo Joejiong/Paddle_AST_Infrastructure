@@ -18,7 +18,7 @@ import re
 
 COUNTER_INPUT_PATH = './api_upgrade_src/dict/counter.dict'
 COUNTER_OUTPUT_PATH = './api_upgrade_src/dict/counter_output.dict'
-COUNTER_OUTPUT_PATH_ORI = '/work/debug/baidu/personal-code/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+COUNTER_OUTPUT_PATH_ORI = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
 
 
 SUFFIX_LIST=['.py', '.sh', '.yaml', '.md', '.yapf', 'gitignore', '.yml', '.gitmodules', '.clang-format', '.hook']
@@ -80,11 +80,12 @@ def load_counter_dict(dict_file):
     return counter_dict
 
 def save_counter_dict(dict_path, json_object, name):
-
-    # ## Working with buffered content
+    """
+    save upgrade api dict and params
+    """
     dict_temp = {}
     if not os.path.exists(COUNTER_OUTPUT_PATH_ORI):
-        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>no such file: ',COUNTER_OUTPUT_PATH2)
+        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>no such file: ',COUNTER_OUTPUT_PATH_ORI)
         os.system(r"touch {}".format(COUNTER_OUTPUT_PATH_ORI))
 
     jsonFile = open(COUNTER_OUTPUT_PATH_ORI, "r", encoding='utf-8') # Open the JSON file for reading
@@ -97,7 +98,7 @@ def save_counter_dict(dict_path, json_object, name):
     print("counter is: ", data[name].get("count", 0))
 
     if not os.path.exists(COUNTER_OUTPUT_PATH_ORI):
-        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>no such file: ',COUNTER_OUTPUT_PATH)
+        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>no such file: ',COUNTER_OUTPUT_PATH_ORI)
         os.system(r"touch {}".format(COUNTER_OUTPUT_PATH_ORI))
 
     jsonFile = open(COUNTER_OUTPUT_PATH_ORI, "w+", encoding='utf-8')

@@ -124,7 +124,7 @@
         "name": "paddle.fluid.cuda_places"
     },
     "paddle.fluid.data": {
-        "count": 379,
+        "count": 381,
         "name": "paddle.nn.data"
     },
     "paddle.fluid.default_main_program": {
@@ -784,7 +784,7 @@
         "name": "paddle.crop_tensor"
     },
     "paddle.fluid.layers.cross_entropy": {
-        "count": 51,
+        "count": 54,
         "name": "paddle.nn.functional.cross_entropy"
     },
     "paddle.fluid.layers.ctc_greedy_decoder": {
@@ -1229,7 +1229,7 @@
         "name": "paddle.nn.functional.maxout"
     },
     "paddle.fluid.layers.mean": {
-        "count": 102,
+        "count": 106,
         "name": "paddle.mean"
     },
     "paddle.fluid.layers.mean_iou": {
@@ -1672,7 +1672,7 @@
         "name": "paddle.nn.functional.softmax"
     },
     "paddle.fluid.layers.softmax_with_cross_entropy": {
-        "count": 35,
+        "count": 36,
         "name": "paddle.nn.functional.softmax_with_cross_entropy"
     },
     "paddle.fluid.layers.softplus": {
