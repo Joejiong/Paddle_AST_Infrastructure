@@ -225,7 +225,7 @@ def load_config(conf_file):
                 conf_dict["input_path"] = line.split("=")[1].strip()
             if line.startswith("output_path"): 
                 conf_dict["output_path"] = line.split("=")[1].strip()
-            if line.startswith("output_path"): 
+            if line.startswith("counter_path"): 
                 conf_dict["counter_path"] = line.split("=")[1].strip()
     return conf_dict
 

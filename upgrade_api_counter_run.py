@@ -239,21 +239,8 @@ if __name__ == "__main__":
                         "delete_dict": "./api_upgrade_src/dict/delete.dict",
                         "counter_dict": "./api_upgrade_src/dict/counter.dict"}
     
-    print(">>>>>>>>>>>>>>>>>counter_path>>>>>>>>>>>>>>>>>>>>>>")
     _config_dict = load_config(upgrade_api_args["args_file"])
-    print(_config_dict["counter_path"])
-    cwd_list = _config_dict["counter_path"].split('/')
-    prefix_list = []
-    for path in cwd_list:
-        if 'PaddleASTInfrastructure' not in path:
-            prefix_list.append(path)
-        else:
-            break
-    origin_prefix_path = "/".join(prefix_list) + '/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
-    SysPaths.COUNTER_OUTPUT_PATH_ORI = origin_prefix_path
-    print('>>>>>>>>>>>>>COUNTER_OUTPUT_PATH_ORI>>>>>>>>>>>>>>>')
-    print(SysPaths.COUNTER_OUTPUT_PATH_ORI)
-    
+    SysPaths.COUNTER_OUTPUT_PATH_ORI = _config_dict["counter_path"]
     main(upgrade_api_args)
 
 

@@ -252,34 +252,34 @@
         "name": "paddle.fluid.dygraph.TreeConv"
     },
     "paddle.fluid.dygraph.base.to_variable": {
-        "count": 1
+        "count": 7
     },
     "paddle.fluid.dygraph.guard": {
-        "count": 2
+        "count": 14
     },
     "paddle.fluid.dygraph.load_dygraph": {
         "count": 0,
         "name": "paddle.imperative.load"
     },
     "paddle.fluid.dygraph.nn.Conv2D": {
-        "count": 1
+        "count": 7
     },
     "paddle.fluid.dygraph.nn.Linear": {
-        "count": 1,
+        "count": 7,
         "name": "paddle.fluid.dygraph.nn.Linear"
     },
     "paddle.fluid.dygraph.nn.Pool2D": {
-        "count": 1
+        "count": 7
     },
     "paddle.fluid.dygraph.no_grad": {
         "count": 0,
         "name": "paddle.imperative.no_grad"
     },
     "paddle.fluid.dygraph.parallel.DataParallel": {
-        "count": 1
+        "count": 7
     },
     "paddle.fluid.dygraph.parallel.prepare_context": {
-        "count": 1
+        "count": 7
     },
     "paddle.fluid.dygraph.prepare_context": {
         "count": 0,
@@ -793,7 +793,7 @@
         "name": "paddle.crop_tensor"
     },
     "paddle.fluid.layers.cross_entropy": {
-        "count": 2,
+        "count": 14,
         "name": "paddle.nn.functional.cross_entropy"
     },
     "paddle.fluid.layers.ctc_greedy_decoder": {
@@ -1238,7 +1238,7 @@
         "name": "paddle.nn.functional.maxout"
     },
     "paddle.fluid.layers.mean": {
-        "count": 2,
+        "count": 14,
         "name": "paddle.mean"
     },
     "paddle.fluid.layers.mean_iou": {
@@ -1461,7 +1461,7 @@
         "name": "paddle.fluid.layers.reorder_lod_tensor_by_rank"
     },
     "paddle.fluid.layers.reshape": {
-        "count": 1,
+        "count": 7,
         "name": "paddle.reshape"
     },
     "paddle.fluid.layers.resize_bilinear": {
@@ -1978,7 +1978,7 @@
         "name": "paddle.optimizer.Adam"
     },
     "paddle.fluid.optimizer.AdamOptimizer": {
-        "count": 1,
+        "count": 7,
         "name": "paddle.optimizer.AdamOptimizer"
     },
     "paddle.fluid.optimizer.Adamax": {
@@ -2070,7 +2070,7 @@
         "name": "paddle.optimizer.SGDOptimizer"
     },
     "paddle.fluid.param_attr.ParamAttr": {
-        "count": 1
+        "count": 7
     },
     "paddle.fluid.profiler.cuda_profiler": {
         "count": 0,
