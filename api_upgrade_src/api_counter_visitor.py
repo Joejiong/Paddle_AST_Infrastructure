@@ -23,7 +23,7 @@ from api_upgrade_src.upgrade_models_api_utils import save_counter_dict
 
 
 COUNTER_DICT_PATH = './api_upgrade_src/dict/counter.dict'
-COUNTER_OUTPUT_PATH2 = '/work/debug/baidu/personal-code/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+COUNTER_OUTPUT_PATH_ORI = '/work/debug/baidu/personal-code/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
 
 
 
@@ -35,7 +35,7 @@ class APICountVisitor(gast.NodeTransformer):
     def __init__(self, node):
         assert isinstance(node, gast.AST)
         self.root = node
-        self.counter_dict = load_counter_dict(COUNTER_OUTPUT_PATH2)
+        self.counter_dict = load_counter_dict(COUNTER_OUTPUT_PATH_ORI)
         self.modify_dict = {}
 
     def count_api_frequency(self, modify_dict): 
@@ -48,6 +48,6 @@ class APICountVisitor(gast.NodeTransformer):
         attr_full_name = get_attr_full_name(node.func)
         if attr_full_name in self.modify_dict:
             self.counter_dict[attr_full_name]['count'] = self.counter_dict[attr_full_name].get('count', 0) + 1
-            save_counter_dict(COUNTER_OUTPUT_PATH2, self.counter_dict, attr_full_name)
+            save_counter_dict(COUNTER_OUTPUT_PATH_ORI, self.counter_dict, attr_full_name)
             print_info("Counting old API once (%s)->hit No(%s) times" % (attr_full_name, self.counter_dict[attr_full_name]['count']))
         return node

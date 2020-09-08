@@ -18,7 +18,7 @@ import re
 
 COUNTER_INPUT_PATH = './api_upgrade_src/dict/counter.dict'
 COUNTER_OUTPUT_PATH = './api_upgrade_src/dict/counter_output.dict'
-COUNTER_OUTPUT_PATH2 = '/work/debug/baidu/personal-code/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+COUNTER_OUTPUT_PATH_ORI = '/work/debug/baidu/personal-code/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
 
 
 SUFFIX_LIST=['.py', '.sh', '.yaml', '.md', '.yapf', 'gitignore', '.yml', '.gitmodules', '.clang-format', '.hook']
@@ -83,32 +83,24 @@ def save_counter_dict(dict_path, json_object, name):
 
     # ## Working with buffered content
     dict_temp = {}
-    if not os.path.exists(COUNTER_OUTPUT_PATH2):
+    if not os.path.exists(COUNTER_OUTPUT_PATH_ORI):
         print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>no such file: ',COUNTER_OUTPUT_PATH2)
-        os.system(r"touch {}".format(COUNTER_OUTPUT_PATH2))
+        os.system(r"touch {}".format(COUNTER_OUTPUT_PATH_ORI))
 
-    jsonFile = open(COUNTER_OUTPUT_PATH2, "r", encoding='utf-8') # Open the JSON file for reading
+    jsonFile = open(COUNTER_OUTPUT_PATH_ORI, "r", encoding='utf-8') # Open the JSON file for reading
     data = json.load(jsonFile) # Read the JSON into the buffer
     data[name]["count"] = json_object[name]["count"]
     dict_temp = data
     jsonFile.close() # Close the JSON file
 
-    # add_dict = {}
-    
-    # print(json_object[name]["count"])
-    # data[name].get('count', 0)
-    # data.update(json_object)
-    # res = json.dumps(data)
-
     print("name is: ", name)
     print("counter is: ", data[name].get("count", 0))
 
-    if not os.path.exists(COUNTER_OUTPUT_PATH2):
+    if not os.path.exists(COUNTER_OUTPUT_PATH_ORI):
         print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>no such file: ',COUNTER_OUTPUT_PATH)
+        os.system(r"touch {}".format(COUNTER_OUTPUT_PATH_ORI))
 
-        os.system(r"touch {}".format(COUNTER_OUTPUT_PATH2))
-
-    jsonFile = open(COUNTER_OUTPUT_PATH2, "w+", encoding='utf-8')
+    jsonFile = open(COUNTER_OUTPUT_PATH_ORI, "w+", encoding='utf-8')
     res = json.dumps(dict_temp, sort_keys=True, indent=4)
     jsonFile.write(res)
     jsonFile.close()
