@@ -143,7 +143,6 @@ def transformer_file(upgrade_config_dict, input, modify_dict=None, is_dir=False)
 
     size = os.path.getsize(input)
     print_info("\033[1;34mStart upgrading model %s\033[0m" % (input))
-    print("cool")
     if size != 0: 
         try: 
             root = gast.parse(inspect.getsource(mdl_inst))

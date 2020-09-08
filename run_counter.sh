@@ -19,6 +19,8 @@ UPGRADE_FILE="upgrade_api_counter_run.py"
 
 
 CUR_FOLDER=$(dirname $(readlink -f "$0"))
+COUNTER_OUTPUT_PATH_ORI="${CUR_FOLDER}/api_upgrade_src/dict/counter_output.dict"
+echo "curent folder : ${COUNTER_OUTPUT_PATH_ORI}"
 
 if [ -d ${INPUT} ]
 then

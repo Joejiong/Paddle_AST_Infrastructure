@@ -76,7 +76,7 @@
         "name": "paddle.WeightNormParamAttr"
     },
     "paddle.fluid.backward.append_backward": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.append_backward"
     },
     "paddle.fluid.backward.gradients": {
@@ -88,7 +88,7 @@
         "name": "paddle.fluid.clip.ErrorClipByValue"
     },
     "paddle.fluid.clip.GradientClipByGlobalNorm": {
-        "count": 10,
+        "count": 20,
         "name": "paddle.nn.GradientClipByGlobalNorm"
     },
     "paddle.fluid.clip.GradientClipByNorm": {
@@ -96,7 +96,7 @@
         "name": "paddle.nn.GradientClipByNorm"
     },
     "paddle.fluid.clip.GradientClipByValue": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.GradientClipByValue"
     },
     "paddle.fluid.clip.set_gradient_clip": {
@@ -124,7 +124,7 @@
         "name": "paddle.fluid.cuda_places"
     },
     "paddle.fluid.data": {
-        "count": 381,
+        "count": 762,
         "name": "paddle.nn.data"
     },
     "paddle.fluid.default_main_program": {
@@ -168,7 +168,7 @@
         "name": "paddle.imperative.CosineDecay"
     },
     "paddle.fluid.dygraph.Embedding": {
-        "count": 6,
+        "count": 12,
         "name": "paddle.nn.Embedding"
     },
     "paddle.fluid.dygraph.ExponentialDecay": {
@@ -196,11 +196,11 @@
         "name": "paddle.nn.LayerList"
     },
     "paddle.fluid.dygraph.LayerNorm": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.LayerNorm"
     },
     "paddle.fluid.dygraph.Linear": {
-        "count": 22,
+        "count": 44,
         "name": "paddle.nn.Linear"
     },
     "paddle.fluid.dygraph.NCE": {
@@ -232,7 +232,7 @@
         "name": "paddle.imperative.PolynomialDecay"
     },
     "paddle.fluid.dygraph.Pool2D": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.Pool2D"
     },
     "paddle.fluid.dygraph.Sequential": {
@@ -252,21 +252,21 @@
         "name": "paddle.fluid.dygraph.TreeConv"
     },
     "paddle.fluid.dygraph.guard": {
-        "count": 57
+        "count": 114
     },
     "paddle.fluid.dygraph.load_dygraph": {
         "count": 0,
         "name": "paddle.imperative.load"
     },
     "paddle.fluid.dygraph.nn.Conv2D": {
-        "count": 15
+        "count": 30
     },
     "paddle.fluid.dygraph.nn.Linear": {
-        "count": 26,
+        "count": 52,
         "name": "paddle.fluid.dygraph.nn.Linear"
     },
     "paddle.fluid.dygraph.nn.Pool2D": {
-        "count": 13
+        "count": 26
     },
     "paddle.fluid.dygraph.no_grad": {
         "count": 0,
@@ -289,7 +289,7 @@
         "name": "paddle.fluid.embedding"
     },
     "paddle.fluid.executor.Executor": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.Executor"
     },
     "paddle.fluid.executor.global_scope": {
@@ -321,7 +321,7 @@
         "name": "paddle.fluid.initializer.BilinearInitializer"
     },
     "paddle.fluid.initializer.Constant": {
-        "count": 97,
+        "count": 194,
         "name": "paddle.nn.initializer.Constant"
     },
     "paddle.fluid.initializer.ConstantInitializer": {
@@ -329,7 +329,7 @@
         "name": "paddle.fluid.initializer.ConstantInitializer"
     },
     "paddle.fluid.initializer.MSRA": {
-        "count": 26,
+        "count": 52,
         "name": "paddle.nn.initializer.MSRA"
     },
     "paddle.fluid.initializer.MSRAInitializer": {
@@ -337,7 +337,7 @@
         "name": "paddle.fluid.initializer.MSRAInitializer"
     },
     "paddle.fluid.initializer.Normal": {
-        "count": 50,
+        "count": 100,
         "name": "paddle.nn.initializer.Normal"
     },
     "paddle.fluid.initializer.NormalInitializer": {
@@ -349,7 +349,7 @@
         "name": "paddle.fluid.initializer.NumpyArrayInitializer"
     },
     "paddle.fluid.initializer.TruncatedNormal": {
-        "count": 21,
+        "count": 42,
         "name": "paddle.nn.initializer.TruncatedNormal"
     },
     "paddle.fluid.initializer.TruncatedNormalInitializer": {
@@ -357,7 +357,7 @@
         "name": "paddle.fluid.initializer.TruncatedNormalInitializer"
     },
     "paddle.fluid.initializer.Uniform": {
-        "count": 80,
+        "count": 160,
         "name": "paddle.nn.initializer.Uniform"
     },
     "paddle.fluid.initializer.UniformInitializer": {
@@ -365,7 +365,7 @@
         "name": "paddle.fluid.initializer.UniformInitializer"
     },
     "paddle.fluid.initializer.Xavier": {
-        "count": 5,
+        "count": 10,
         "name": "paddle.nn.initializer.Xavier"
     },
     "paddle.fluid.initializer.XavierInitializer": {
@@ -385,7 +385,7 @@
         "name": "paddle.fluid.io.PyReader"
     },
     "paddle.fluid.io.batch": {
-        "count": 40,
+        "count": 80,
         "name": "paddle.batch"
     },
     "paddle.fluid.io.buffered": {
@@ -417,11 +417,11 @@
         "name": "paddle.fluid.io.get_program_persistable_vars"
     },
     "paddle.fluid.io.load": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.load"
     },
     "paddle.fluid.io.load_inference_model": {
-        "count": 14,
+        "count": 28,
         "name": "paddle.io.load_inference_model"
     },
     "paddle.fluid.io.load_params": {
@@ -433,7 +433,7 @@
         "name": "paddle.fluid.io.load_persistables"
     },
     "paddle.fluid.io.load_program_state": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.io.load_program_state"
     },
     "paddle.fluid.io.load_vars": {
@@ -449,11 +449,11 @@
         "name": "paddle.reader.multiprocess_reader"
     },
     "paddle.fluid.io.save": {
-        "count": 7,
+        "count": 14,
         "name": "paddle.save"
     },
     "paddle.fluid.io.save_inference_model": {
-        "count": 21,
+        "count": 42,
         "name": "paddle.io.save_inference_model"
     },
     "paddle.fluid.io.save_params": {
@@ -469,11 +469,11 @@
         "name": "paddle.fluid.io.save_vars"
     },
     "paddle.fluid.io.set_program_state": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.io.set_program_state"
     },
     "paddle.fluid.io.shuffle": {
-        "count": 11,
+        "count": 22,
         "name": "paddle.shuffle"
     },
     "paddle.fluid.io.xmap_readers": {
@@ -545,7 +545,7 @@
         "name": "paddle.fluid.layers.While"
     },
     "paddle.fluid.layers.abs": {
-        "count": 17,
+        "count": 34,
         "name": "paddle.abs"
     },
     "paddle.fluid.layers.accuracy": {
@@ -557,7 +557,7 @@
         "name": "paddle.acos"
     },
     "paddle.fluid.layers.adaptive_pool2d": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.functional.adaptive_pool2d"
     },
     "paddle.fluid.layers.adaptive_pool3d": {
@@ -569,7 +569,7 @@
         "name": "paddle.nn.functional.add_position_encoding"
     },
     "paddle.fluid.layers.affine_channel": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.functional.affine_channel"
     },
     "paddle.fluid.layers.affine_grid": {
@@ -587,7 +587,7 @@
             "name": null,
             "out": null
         },
-        "count": 1,
+        "count": 2,
         "name": "paddle.argmax",
         "rename": {
             "x": "input"
@@ -601,7 +601,7 @@
         "add": {
             "out": null
         },
-        "count": 2,
+        "count": 4,
         "name": "paddle.sort"
     },
     "paddle.fluid.layers.array_length": {
@@ -621,7 +621,7 @@
         "name": "paddle.asin"
     },
     "paddle.fluid.layers.assign": {
-        "count": 26,
+        "count": 52,
         "name": "paddle.nn.functional.assign"
     },
     "paddle.fluid.layers.atan": {
@@ -644,11 +644,11 @@
         "name": "paddle.fluid.layers.batch_norm"
     },
     "paddle.fluid.layers.beam_search": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.nn.beam_search"
     },
     "paddle.fluid.layers.beam_search_decode": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.nn.beam_search_decode"
     },
     "paddle.fluid.layers.bilinear_tensor_product": {
@@ -672,7 +672,7 @@
         "name": "paddle.nn.functional.box_decoder_and_assign"
     },
     "paddle.fluid.layers.bpr_loss": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.bpr_loss"
     },
     "paddle.fluid.layers.brelu": {
@@ -680,15 +680,15 @@
         "name": "paddle.nn.functional.brelu"
     },
     "paddle.fluid.layers.case": {
-        "count": 3,
+        "count": 6,
         "name": "paddle.nn.case"
     },
     "paddle.fluid.layers.cast": {
-        "count": 118,
+        "count": 236,
         "name": "paddle.cast"
     },
     "paddle.fluid.layers.ceil": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.ceil"
     },
     "paddle.fluid.layers.center_loss": {
@@ -700,7 +700,7 @@
         "name": "paddle.metric.chunk_eval"
     },
     "paddle.fluid.layers.clip": {
-        "count": 16,
+        "count": 32,
         "name": "paddle.nn.clip"
     },
     "paddle.fluid.layers.clip_by_norm": {
@@ -712,7 +712,7 @@
         "name": "paddle.nn.functional.collect_fpn_proposals"
     },
     "paddle.fluid.layers.concat": {
-        "count": 191,
+        "count": 382,
         "name": "paddle.concat"
     },
     "paddle.fluid.layers.cond": {
@@ -740,7 +740,7 @@
         "name": "paddle.nn.functional.conv3d_transpose"
     },
     "paddle.fluid.layers.cos": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.cos"
     },
     "paddle.fluid.layers.cos_sim": {
@@ -748,7 +748,7 @@
         "name": "paddle.metric.cos_sim"
     },
     "paddle.fluid.layers.cosine_decay": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.cosine_decay"
     },
     "paddle.fluid.layers.create_array": {
@@ -768,7 +768,7 @@
         "name": "paddle.fluid.layers.create_py_reader_by_data"
     },
     "paddle.fluid.layers.create_tensor": {
-        "count": 11,
+        "count": 22,
         "name": "paddle.create_tensor"
     },
     "paddle.fluid.layers.crf_decoding": {
@@ -784,7 +784,7 @@
         "name": "paddle.crop_tensor"
     },
     "paddle.fluid.layers.cross_entropy": {
-        "count": 54,
+        "count": 108,
         "name": "paddle.nn.functional.cross_entropy"
     },
     "paddle.fluid.layers.ctc_greedy_decoder": {
@@ -792,7 +792,7 @@
         "name": "paddle.fluid.layers.ctc_greedy_decoder"
     },
     "paddle.fluid.layers.cumsum": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.cumsum"
     },
     "paddle.fluid.layers.data": {
@@ -820,7 +820,7 @@
         "name": "paddle.nn.functional.detection_output"
     },
     "paddle.fluid.layers.diag": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.diag"
     },
     "paddle.fluid.layers.dice_loss": {
@@ -836,7 +836,7 @@
         "name": "paddle.fluid.layers.double_buffer"
     },
     "paddle.fluid.layers.dropout": {
-        "count": 97,
+        "count": 194,
         "name": "paddle.nn.functional.dropout"
     },
     "paddle.fluid.layers.dynamic_decode": {
@@ -864,7 +864,7 @@
             "alpha": 1,
             "out": null
         },
-        "count": 59,
+        "count": 118,
         "delete": {
             "act=None": null,
             "axis=None": null
@@ -875,7 +875,7 @@
         "add": {
             "out": null
         },
-        "count": 4,
+        "count": 8,
         "delete": {
             "act=None": null,
             "axis=None": null
@@ -883,23 +883,23 @@
         "name": "paddle.div"
     },
     "paddle.fluid.layers.elementwise_floordiv": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.elementwise_floordiv"
     },
     "paddle.fluid.layers.elementwise_max": {
-        "count": 3,
+        "count": 6,
         "name": "paddle.elementwise_max"
     },
     "paddle.fluid.layers.elementwise_min": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.elementwise_min"
     },
     "paddle.fluid.layers.elementwise_mod": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.elementwise_mod"
     },
     "paddle.fluid.layers.elementwise_mul": {
-        "count": 67,
+        "count": 134,
         "name": "paddle.elementwise_mul"
     },
     "paddle.fluid.layers.elementwise_pow": {
@@ -907,11 +907,11 @@
         "name": "paddle.elementwise_pow"
     },
     "paddle.fluid.layers.elementwise_sub": {
-        "count": 31,
+        "count": 62,
         "name": "paddle.elementwise_sub"
     },
     "paddle.fluid.layers.elu": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.functional.elu"
     },
     "paddle.fluid.layers.embedding": {
@@ -922,7 +922,7 @@
         "add": {
             "name": null
         },
-        "count": 7,
+        "count": 14,
         "delete": {
             "cond=None": null
         },
@@ -933,11 +933,11 @@
         "name": "paddle.erf"
     },
     "paddle.fluid.layers.exp": {
-        "count": 7,
+        "count": 14,
         "name": "paddle.exp"
     },
     "paddle.fluid.layers.expand": {
-        "count": 38,
+        "count": 76,
         "name": "paddle.expand"
     },
     "paddle.fluid.layers.expand_as": {
@@ -945,7 +945,7 @@
         "name": "paddle.expand_as"
     },
     "paddle.fluid.layers.exponential_decay": {
-        "count": 7,
+        "count": 14,
         "name": "paddle.nn.functional.exponential_decay"
     },
     "paddle.fluid.layers.eye": {
@@ -968,7 +968,7 @@
         "name": "paddle.fluid.layers.fc"
     },
     "paddle.fluid.layers.fill_constant": {
-        "count": 65,
+        "count": 130,
         "name": "paddle.fill_constant"
     },
     "paddle.fluid.layers.fill_constant_batch_size_like": {
@@ -980,11 +980,11 @@
         "name": "paddle.nn.functional.filter_by_instag"
     },
     "paddle.fluid.layers.flatten": {
-        "count": 9,
+        "count": 18,
         "name": "paddle.flatten"
     },
     "paddle.fluid.layers.floor": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.floor"
     },
     "paddle.fluid.layers.fsp_matrix": {
@@ -992,15 +992,15 @@
         "name": "paddle.nn.functional.fsp_matrix"
     },
     "paddle.fluid.layers.gather": {
-        "count": 14,
+        "count": 28,
         "name": "paddle.gather"
     },
     "paddle.fluid.layers.gather_nd": {
-        "count": 7,
+        "count": 14,
         "name": "paddle.gather_nd"
     },
     "paddle.fluid.layers.gather_tree": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.gather_tree"
     },
     "paddle.fluid.layers.gaussian_random": {
@@ -1036,7 +1036,7 @@
         "name": "paddle.greater_equal"
     },
     "paddle.fluid.layers.greater_than": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.greater_than"
     },
     "paddle.fluid.layers.grid_sampler": {
@@ -1088,7 +1088,7 @@
         "name": "paddle.fluid.layers.im2sequence"
     },
     "paddle.fluid.layers.image_resize": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.image_resize"
     },
     "paddle.fluid.layers.image_resize_short": {
@@ -1096,7 +1096,7 @@
         "name": "paddle.nn.functional.image_resize_short"
     },
     "paddle.fluid.layers.increment": {
-        "count": 6,
+        "count": 12,
         "name": "paddle.increment"
     },
     "paddle.fluid.layers.instance_norm": {
@@ -1112,11 +1112,11 @@
         "name": "paddle.fluid.layers.iou_similarity"
     },
     "paddle.fluid.layers.is_empty": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.is_empty"
     },
     "paddle.fluid.layers.isfinite": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.isfinite"
     },
     "paddle.fluid.layers.kldiv_loss": {
@@ -1124,11 +1124,11 @@
         "name": "paddle.nn.functional.kldiv_loss"
     },
     "paddle.fluid.layers.l2_normalize": {
-        "count": 5,
+        "count": 10,
         "name": "paddle.nn.functional.l2_normalize"
     },
     "paddle.fluid.layers.label_smooth": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.nn.functional.label_smooth"
     },
     "paddle.fluid.layers.layer_norm": {
@@ -1136,7 +1136,7 @@
         "name": "paddle.fluid.layers.layer_norm"
     },
     "paddle.fluid.layers.leaky_relu": {
-        "count": 17,
+        "count": 34,
         "name": "paddle.nn.functional.leaky_relu"
     },
     "paddle.fluid.layers.less_equal": {
@@ -1144,7 +1144,7 @@
         "name": "paddle.less_equal"
     },
     "paddle.fluid.layers.less_than": {
-        "count": 11,
+        "count": 22,
         "name": "paddle.less_than"
     },
     "paddle.fluid.layers.linear_chain_crf": {
@@ -1152,7 +1152,7 @@
         "name": "paddle.fluid.layers.linear_chain_crf"
     },
     "paddle.fluid.layers.linear_lr_warmup": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.linear_lr_warmup"
     },
     "paddle.fluid.layers.linspace": {
@@ -1177,23 +1177,23 @@
         "name": "paddle.fluid.layers.lod_reset"
     },
     "paddle.fluid.layers.log": {
-        "count": 18,
+        "count": 36,
         "name": "paddle.log"
     },
     "paddle.fluid.layers.log_loss": {
-        "count": 6,
+        "count": 12,
         "name": "paddle.nn.functional.log_loss"
     },
     "paddle.fluid.layers.logical_and": {
-        "count": 9,
+        "count": 18,
         "name": "paddle.logical_and"
     },
     "paddle.fluid.layers.logical_not": {
-        "count": 5,
+        "count": 10,
         "name": "paddle.logical_not"
     },
     "paddle.fluid.layers.logical_or": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.logical_or"
     },
     "paddle.fluid.layers.logical_xor": {
@@ -1221,7 +1221,7 @@
         "name": "paddle.nn.functional.margin_rank_loss"
     },
     "paddle.fluid.layers.matmul": {
-        "count": 68,
+        "count": 136,
         "name": "paddle.matmul"
     },
     "paddle.fluid.layers.maxout": {
@@ -1229,7 +1229,7 @@
         "name": "paddle.nn.functional.maxout"
     },
     "paddle.fluid.layers.mean": {
-        "count": 106,
+        "count": 212,
         "name": "paddle.mean"
     },
     "paddle.fluid.layers.mean_iou": {
@@ -1248,7 +1248,7 @@
         "add": {
             "out": null
         },
-        "count": 3,
+        "count": 6,
         "name": "paddle.mul"
     },
     "paddle.fluid.layers.multi_box_head": {
@@ -1256,7 +1256,7 @@
         "name": "paddle.fluid.layers.multi_box_head"
     },
     "paddle.fluid.layers.multiclass_nms": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.multiclass_nms"
     },
     "paddle.fluid.layers.multiplex": {
@@ -1309,7 +1309,7 @@
         "name": "paddle.nn.functional.pad"
     },
     "paddle.fluid.layers.pad2d": {
-        "count": 14,
+        "count": 28,
         "name": "paddle.nn.functional.pad2d"
     },
     "paddle.fluid.layers.pad_constant_like": {
@@ -1317,7 +1317,7 @@
         "name": "paddle.nn.functional.pad_constant_like"
     },
     "paddle.fluid.layers.piecewise_decay": {
-        "count": 42,
+        "count": 84,
         "name": "paddle.nn.functional.piecewise_decay"
     },
     "paddle.fluid.layers.pixel_shuffle": {
@@ -1333,18 +1333,18 @@
         "name": "paddle.nn.functional.polynomial_decay"
     },
     "paddle.fluid.layers.pool2d": {
-        "count": 86,
+        "count": 172,
         "name": "paddle.nn.functional.pool2d"
     },
     "paddle.fluid.layers.pool3d": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.pool3d"
     },
     "paddle.fluid.layers.pow": {
         "add": {
             "out": null
         },
-        "count": 1,
+        "count": 2,
         "name": "paddle.pow",
         "rename": {
             "factor": "exponent",
@@ -1360,7 +1360,7 @@
         "name": "paddle.nn.functional.prior_box"
     },
     "paddle.fluid.layers.prroi_pool": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.nn.functional.prroi_pool"
     },
     "paddle.fluid.layers.psroi_pool": {
@@ -1383,7 +1383,7 @@
         "add": {
             "name": null
         },
-        "count": 5,
+        "count": 10,
         "name": "paddle.arange"
     },
     "paddle.fluid.layers.rank": {
@@ -1403,7 +1403,7 @@
         "name": "paddle.reciprocal"
     },
     "paddle.fluid.layers.reduce_all": {
-        "count": 3,
+        "count": 6,
         "name": "paddle.reduce_all"
     },
     "paddle.fluid.layers.reduce_any": {
@@ -1414,18 +1414,18 @@
         "add": {
             "out": null
         },
-        "count": 6,
+        "count": 12,
         "name": "paddle.max"
     },
     "paddle.fluid.layers.reduce_mean": {
-        "count": 87,
+        "count": 174,
         "name": "paddle.reduce_mean"
     },
     "paddle.fluid.layers.reduce_min": {
         "add": {
             "out": null
         },
-        "count": 3,
+        "count": 6,
         "name": "paddle.min"
     },
     "paddle.fluid.layers.reduce_prod": {
@@ -1433,14 +1433,14 @@
         "name": "paddle.reduce_prod"
     },
     "paddle.fluid.layers.reduce_sum": {
-        "count": 118,
+        "count": 236,
         "name": "paddle.sum",
         "rename": {
             "dim": "axis"
         }
     },
     "paddle.fluid.layers.relu": {
-        "count": 46,
+        "count": 92,
         "name": "paddle.nn.functional.relu"
     },
     "paddle.fluid.layers.relu6": {
@@ -1452,15 +1452,15 @@
         "name": "paddle.fluid.layers.reorder_lod_tensor_by_rank"
     },
     "paddle.fluid.layers.reshape": {
-        "count": 319,
+        "count": 638,
         "name": "paddle.reshape"
     },
     "paddle.fluid.layers.resize_bilinear": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.functional.resize_bilinear"
     },
     "paddle.fluid.layers.resize_nearest": {
-        "count": 9,
+        "count": 18,
         "name": "paddle.nn.functional.resize_nearest"
     },
     "paddle.fluid.layers.resize_trilinear": {
@@ -1476,7 +1476,7 @@
         "name": "paddle.nn.functional.retinanet_target_assign"
     },
     "paddle.fluid.layers.reverse": {
-        "count": 3,
+        "count": 6,
         "name": "paddle.reverse"
     },
     "paddle.fluid.layers.rnn": {
@@ -1512,7 +1512,7 @@
         "name": "paddle.rsqrt"
     },
     "paddle.fluid.layers.sampled_softmax_with_cross_entropy": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.sampled_softmax_with_cross_entropy"
     },
     "paddle.fluid.layers.sampling_id": {
@@ -1520,7 +1520,7 @@
         "name": "paddle.fluid.layers.sampling_id"
     },
     "paddle.fluid.layers.scale": {
-        "count": 18,
+        "count": 36,
         "name": "paddle.scale"
     },
     "paddle.fluid.layers.scatter": {
@@ -1604,7 +1604,7 @@
         "name": "paddle.fluid.layers.sequence_unpad"
     },
     "paddle.fluid.layers.shape": {
-        "count": 41,
+        "count": 82,
         "name": "paddle.shape"
     },
     "paddle.fluid.layers.shard_index": {
@@ -1623,14 +1623,14 @@
         "add": {
             "inplace": false
         },
-        "count": 43,
+        "count": 86,
         "name": "paddle.nn.Sigmoid",
         "rename": {
             "x": "input"
         }
     },
     "paddle.fluid.layers.sigmoid_cross_entropy_with_logits": {
-        "count": 33,
+        "count": 66,
         "name": "paddle.nn.functional.sigmoid_cross_entropy_with_logits"
     },
     "paddle.fluid.layers.sigmoid_focal_loss": {
@@ -1649,18 +1649,18 @@
         "add": {
             "out": null
         },
-        "count": 1,
+        "count": 2,
         "name": "paddle.sin",
         "rename": {
             "x": "input"
         }
     },
     "paddle.fluid.layers.slice": {
-        "count": 51,
+        "count": 102,
         "name": "paddle.slice"
     },
     "paddle.fluid.layers.smooth_l1": {
-        "count": 7,
+        "count": 14,
         "name": "paddle.nn.functional.smooth_l1"
     },
     "paddle.fluid.layers.soft_relu": {
@@ -1668,11 +1668,11 @@
         "name": "paddle.nn.functional.soft_relu"
     },
     "paddle.fluid.layers.softmax": {
-        "count": 46,
+        "count": 92,
         "name": "paddle.nn.functional.softmax"
     },
     "paddle.fluid.layers.softmax_with_cross_entropy": {
-        "count": 36,
+        "count": 72,
         "name": "paddle.nn.functional.softmax_with_cross_entropy"
     },
     "paddle.fluid.layers.softplus": {
@@ -1696,29 +1696,29 @@
         "name": "paddle.fluid.layers.spectral_norm"
     },
     "paddle.fluid.layers.split": {
-        "count": 19,
+        "count": 38,
         "name": "paddle.split"
     },
     "paddle.fluid.layers.sqrt": {
         "add": {
             "out": null
         },
-        "count": 10,
+        "count": 20,
         "name": "paddle.sqrt"
     },
     "paddle.fluid.layers.square": {
-        "count": 40,
+        "count": 80,
         "name": "paddle.square"
     },
     "paddle.fluid.layers.square_error_cost": {
-        "count": 3,
+        "count": 6,
         "name": "paddle.nn.functional.square_error_cost"
     },
     "paddle.fluid.layers.squeeze": {
         "add": {
             "out": null
         },
-        "count": 50,
+        "count": 100,
         "name": "paddle.squeeze"
     },
     "paddle.fluid.layers.ssd_loss": {
@@ -1729,7 +1729,7 @@
         "add": {
             "out": null
         },
-        "count": 22,
+        "count": 44,
         "name": "paddle.stack",
         "rename": {
             "x": "input"
@@ -1748,11 +1748,11 @@
         "name": "paddle.sum"
     },
     "paddle.fluid.layers.sums": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.sums"
     },
     "paddle.fluid.layers.swish": {
-        "count": 4,
+        "count": 8,
         "name": "paddle.nn.functional.swish"
     },
     "paddle.fluid.layers.switch_case": {
@@ -1763,7 +1763,7 @@
         "add": {
             "out": null
         },
-        "count": 32,
+        "count": 64,
         "name": "paddle.tanh",
         "rename": {
             "x": "input"
@@ -1782,7 +1782,7 @@
         "name": "paddle.nn.functional.teacher_student_sigmoid_loss"
     },
     "paddle.fluid.layers.temporal_shift": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.temporal_shift"
     },
     "paddle.fluid.layers.tensor_array_to_tensor": {
@@ -1790,15 +1790,15 @@
         "name": "paddle.fluid.layers.tensor_array_to_tensor"
     },
     "paddle.fluid.layers.thresholded_relu": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.functional.thresholded_relu"
     },
     "paddle.fluid.layers.topk": {
-        "count": 17,
+        "count": 34,
         "name": "paddle.topk"
     },
     "paddle.fluid.layers.transpose": {
-        "count": 109,
+        "count": 218,
         "name": "paddle.transpose"
     },
     "paddle.fluid.layers.unfold": {
@@ -1825,15 +1825,15 @@
         "add": {
             "out": null
         },
-        "count": 52,
+        "count": 104,
         "name": "paddle.unsqueeze"
     },
     "paddle.fluid.layers.unstack": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.unstack"
     },
     "paddle.fluid.layers.warpctc": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.nn.functional.warpctc"
     },
     "paddle.fluid.layers.where": {
@@ -1841,7 +1841,7 @@
         "name": "paddle.where"
     },
     "paddle.fluid.layers.while_loop": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.nn.while_loop"
     },
     "paddle.fluid.layers.yolo_box": {
@@ -1857,7 +1857,7 @@
             "device": null,
             "out": null
         },
-        "count": 5,
+        "count": 10,
         "delete": {
             "None": null,
             "force_cpu": null
@@ -1870,7 +1870,7 @@
             "dtype": null,
             "name": null
         },
-        "count": 3,
+        "count": 6,
         "name": "paddle.zeros_like",
         "rename": {
             "x": "input"
@@ -1889,15 +1889,15 @@
         "name": "paddle.fluid.memory_optimize"
     },
     "paddle.fluid.metrics.Accuracy": {
-        "count": 5,
+        "count": 10,
         "name": "paddle.metric.Accuracy"
     },
     "paddle.fluid.metrics.Auc": {
-        "count": 6,
+        "count": 12,
         "name": "paddle.metric.Auc"
     },
     "paddle.fluid.metrics.ChunkEvaluator": {
-        "count": 5,
+        "count": 10,
         "name": "paddle.metric.ChunkEvaluator"
     },
     "paddle.fluid.metrics.CompositeMetric": {
@@ -1945,11 +1945,11 @@
         "name": "paddle.fluid.nets.simple_img_conv_pool"
     },
     "paddle.fluid.one_hot": {
-        "count": 5,
+        "count": 10,
         "name": "paddle.nn.functional.one_hot"
     },
     "paddle.fluid.optimizer.Adadelta": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.optimizer.Adadelta"
     },
     "paddle.fluid.optimizer.AdadeltaOptimizer": {
@@ -1957,19 +1957,19 @@
         "name": "paddle.optimizer.AdadeltaOptimizer"
     },
     "paddle.fluid.optimizer.Adagrad": {
-        "count": 7,
+        "count": 14,
         "name": "paddle.optimizer.Adagrad"
     },
     "paddle.fluid.optimizer.AdagradOptimizer": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.optimizer.AdagradOptimizer"
     },
     "paddle.fluid.optimizer.Adam": {
-        "count": 57,
+        "count": 114,
         "name": "paddle.optimizer.Adam"
     },
     "paddle.fluid.optimizer.AdamOptimizer": {
-        "count": 16,
+        "count": 32,
         "name": "paddle.optimizer.AdamOptimizer"
     },
     "paddle.fluid.optimizer.Adamax": {
@@ -1981,7 +1981,7 @@
         "name": "paddle.optimizer.AdamaxOptimizer"
     },
     "paddle.fluid.optimizer.DGCMomentumOptimizer": {
-        "count": 1,
+        "count": 2,
         "name": "paddle.optimizer.DGCMomentumOptimizer"
     },
     "paddle.fluid.optimizer.DecayedAdagrad": {
@@ -2029,11 +2029,11 @@
         "name": "paddle.optimizer.LookaheadOptimizer"
     },
     "paddle.fluid.optimizer.ModelAverage": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.optimizer.ModelAverage"
     },
     "paddle.fluid.optimizer.Momentum": {
-        "count": 19,
+        "count": 38,
         "name": "paddle.optimizer.Momentum"
     },
     "paddle.fluid.optimizer.MomentumOptimizer": {
@@ -2053,11 +2053,11 @@
         "name": "paddle.optimizer.RecomputeOptimizer"
     },
     "paddle.fluid.optimizer.SGD": {
-        "count": 10,
+        "count": 20,
         "name": "paddle.optimizer.SGD"
     },
     "paddle.fluid.optimizer.SGDOptimizer": {
-        "count": 2,
+        "count": 4,
         "name": "paddle.optimizer.SGDOptimizer"
     },
     "paddle.fluid.profiler.cuda_profiler": {
@@ -2109,7 +2109,7 @@
         "name": "paddle.fluid.require_version"
     },
     "paddle.fluid.save": {
-        "count": 28,
+        "count": 56,
         "name": "paddle.save"
     },
     "paddle.fluid.scope_guard": {
