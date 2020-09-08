@@ -36,6 +36,7 @@ from api_upgrade_src.replace_full_name_transformer import PaddleReplaceFullNameT
 from api_upgrade_src.import_transformer import ImportVisitor
 from api_upgrade_src.from_count_transformer import FromCountVisitor
 from api_upgrade_src.api_counter_visitor import APICountVisitor
+from api_upgrade_src.common.Paths import SysPaths
 
 
 BUILD_IN_FUN = dir(__builtins__)
@@ -194,7 +195,7 @@ def main(upgrade_api_args):
     delete_list = load_delete_dict(upgrade_api_args["delete_dict"])
     delete_pattern = "|".join(delete_list)
     # counter_dict = load_counter_dict(upgrade_api_args["counter_dict"])
-    
+    # = upgrade_config_dict["counter_path"]
     if isinstance(file_py_list, list): 
         for path in file_py_list: 
             content = open(path, 'r').readlines()
@@ -237,6 +238,21 @@ if __name__ == "__main__":
                         "args_file": "./api_upgrade_src/conf/upgrade.conf", 
                         "delete_dict": "./api_upgrade_src/dict/delete.dict",
                         "counter_dict": "./api_upgrade_src/dict/counter.dict"}
+    
+    print(">>>>>>>>>>>>>>>>>counter_path>>>>>>>>>>>>>>>>>>>>>>")
+    _config_dict = load_config(upgrade_api_args["args_file"])
+    print(_config_dict["counter_path"])
+    cwd_list = _config_dict["counter_path"].split('/')
+    prefix_list = []
+    for path in cwd_list:
+        if 'PaddleASTInfrastructure' not in path:
+            prefix_list.append(path)
+        else:
+            break
+    origin_prefix_path = "/".join(prefix_list) + '/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+    SysPaths.COUNTER_OUTPUT_PATH_ORI = origin_prefix_path
+    print('>>>>>>>>>>>>>COUNTER_OUTPUT_PATH_ORI>>>>>>>>>>>>>>>')
+    print(SysPaths.COUNTER_OUTPUT_PATH_ORI)
     
     main(upgrade_api_args)
 

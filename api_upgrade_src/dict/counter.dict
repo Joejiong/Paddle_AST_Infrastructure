@@ -2147,6 +2147,10 @@
         "count": 0
     },
     "paddle.fluid.dygraph.nn.Pool2D":{"count": 0},
-    "paddle.fluid.dygraph.guard":{"count": 0}
+    "paddle.fluid.dygraph.guard":{"count": 0},
+    "paddle.fluid.param_attr.ParamAttr":{"count": 0},
+    "paddle.fluid.dygraph.base.to_variable":{"count": 0},
+    "paddle.fluid.dygraph.parallel.prepare_context":{"count": 0},
+    "paddle.fluid.dygraph.parallel.DataParallel":{"count": 0}
 
 }

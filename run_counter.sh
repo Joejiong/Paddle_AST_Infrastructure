@@ -49,6 +49,8 @@ then
   config_file="./api_upgrade_src/conf/upgrade.conf"
   sed -i "1c input_path=${INPUT}" ${config_file}
   sed -i "2c output_path=${output_fir}" ${config_file}
+  sed -i "3c counter_path=${COUNTER_OUTPUT_PATH_ORI}" ${config_file}
+
   python3 ${UPGRADE_FILE}
 
   if [ -d "${UPGRADE_MDL}" ]; then

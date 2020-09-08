@@ -15,15 +15,21 @@
 import astor
 import gast
 import inspect
+import os
 
 from api_upgrade_src.node_operation import get_attr_full_name
 from api_upgrade_src.upgrade_models_api_utils import print_info
 from api_upgrade_src.upgrade_models_api_utils import load_counter_dict
 from api_upgrade_src.upgrade_models_api_utils import save_counter_dict
-
+from api_upgrade_src.common.Paths import SysPaths
 
 COUNTER_DICT_PATH = './api_upgrade_src/dict/counter.dict'
-COUNTER_OUTPUT_PATH_ORI = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+COUNTER_OUTPUT_PATH_ORI = SysPaths.COUNTER_OUTPUT_PATH_ORI
+
+# TODO(get general path before shell copy the tool)
+# cwd = os.getcwd()
+# cwd_prefix = "/".join([item for item in cwd.split('/') if item not in ["PaddleASTInfrastructure", "paddle_api_upgrade", "api_upgrade_src", "dict", "counter_output.dict"]])
+# COUNTER_OUTPUT_PATH_ORI = cwd_prefix + '/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
 
 
 

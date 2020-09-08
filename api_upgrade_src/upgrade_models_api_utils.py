@@ -15,10 +15,16 @@
 import json
 import os
 import re
+from api_upgrade_src.common.Paths import SysPaths
 
 COUNTER_INPUT_PATH = './api_upgrade_src/dict/counter.dict'
 COUNTER_OUTPUT_PATH = './api_upgrade_src/dict/counter_output.dict'
-COUNTER_OUTPUT_PATH_ORI = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+COUNTER_OUTPUT_PATH_ORI = SysPaths.COUNTER_OUTPUT_PATH_ORI
+
+# TODO(get general path before shell copy the tool)
+# cwd = os.getcwd()
+# cwd_prefix = "/".join([item for item in cwd.split('/') if item not in ["PaddleASTInfrastructure", "paddle_api_upgrade", "api_upgrade_src", "dict", "counter_output.dict"]])
+# COUNTER_OUTPUT_PATH_ORI = cwd_prefix + '/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
 
 
 SUFFIX_LIST=['.py', '.sh', '.yaml', '.md', '.yapf', 'gitignore', '.yml', '.gitmodules', '.clang-format', '.hook']
@@ -211,7 +217,7 @@ def check_built_in_func():
 
 
 def load_config(conf_file): 
-    conf_dict = {"input_path": None, "output_path": None}
+    conf_dict = {"input_path": None, "output_path": None, "counter_path": None}
     with open(conf_file, 'r') as fr: 
         for line in fr: 
             line = line.strip()
@@ -219,5 +225,7 @@ def load_config(conf_file):
                 conf_dict["input_path"] = line.split("=")[1].strip()
             if line.startswith("output_path"): 
                 conf_dict["output_path"] = line.split("=")[1].strip()
+            if line.startswith("output_path"): 
+                conf_dict["counter_path"] = line.split("=")[1].strip()
     return conf_dict
 

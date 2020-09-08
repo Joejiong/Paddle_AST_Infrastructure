@@ -234,5 +234,8 @@ if __name__ == "__main__":
                         "args_file": "./api_upgrade_src/conf/upgrade.conf", 
                         "delete_dict": "./api_upgrade_src/dict/delete.dict",
                         "counter_dict": "./api_upgrade_src/dict/counter.dict"}
-    
+    print(">>>>>>>>>>>>>>>>>counter_path>>>>>>>>>>>>>>>>>>>>>>")
+   
+    _config_dict = load_config(upgrade_api_args["args_file"])
+    print(_config_dict["counter_dict"])
     main(upgrade_api_args)
