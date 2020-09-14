@@ -25,6 +25,7 @@ import sys
 import re
 import io
 import os
+import logging
 
 import paddle
 
@@ -37,6 +38,18 @@ from api_upgrade_src.import_transformer import ImportVisitor
 from api_upgrade_src.from_count_transformer import FromCountVisitor
 from api_upgrade_src.api_counter_visitor import APICountVisitor
 from api_upgrade_src.common.Paths import SysPaths
+
+
+LOGGING_PATH = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/log/error_log.txt'
+
+logger = logging.getLogger("API_COUNTER_LOGGOR")
+logger.setLevel(level=logging.INFO)
+filehandler = logging.FileHandler(LOGGING_PATH, mode='w')
+# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter('%(message)s')
+
+filehandler.setFormatter(formatter)
+logger.addHandler(filehandler)
 
 
 BUILD_IN_FUN = dir(__builtins__)
@@ -161,16 +174,12 @@ def transformer_file(upgrade_config_dict, input, modify_dict=None, is_dir=False)
             root = replace_full_name(root, import_dict)
 
             APICountVisitor(root).count_api_frequency(modify_dict)
-
-            # root = transformer_root(root, modify_dict)
-            # with open(out_file, 'w', encoding="utf8") as fw: 
-            #     fw.write(astor.to_source(gast.gast_to_ast(root))) 
+ 
         except Exception as e:
+            logger.info('missing APIs:: %s' % (e))
+            # logger.info('\033[1;33%s error!! with %s.\033[0m' % (input, e))
             print_info('\033[1;33;41mParser and upgrade %s error!!, please check API and convert it manually, with %s.\033[0m' % (input, e))
-            return -1
-    else: 
-        with open(out_file, 'w') as fw:  
-            fw.write(open(filename, 'r').read())
+   
     if cache_file is not None: 
         os.remove(cache_dir)
     
@@ -194,10 +203,14 @@ def main(upgrade_api_args):
     modify_dict = load_modify_dict(upgrade_api_args["modify_dict"])
     delete_list = load_delete_dict(upgrade_api_args["delete_dict"])
     delete_pattern = "|".join(delete_list)
-    # counter_dict = load_counter_dict(upgrade_api_args["counter_dict"])
-    # = upgrade_config_dict["counter_path"]
+    
     if isinstance(file_py_list, list): 
         for path in file_py_list: 
+            try:
+                content = open(path, 'r').readlines()
+            except Exception as e: 
+                print_info("\033[1;31m %s \033[0m" % (path))
+                raise e
             content = open(path, 'r').readlines()
             match = re.search(delete_pattern, "\n".join(content))
             if match: 
@@ -210,6 +223,7 @@ def main(upgrade_api_args):
                         try: 
                             transformer_file(upgrade_config_dict, path, modify_dict, is_dir=True)
                         except Exception as e: 
+                            # logger.info("\033[1;31m %s upgrade error, please check file, use a replacement policy and convert it manually, with error: %s. \033[0m" % (path, e))
                             print_info("\033[1;31m %s upgrade error, please check file, use a replacement policy and convert it manually, with error: %s. \033[0m" % (path, e))
                 except: 
                     print_info("\033[1;31m %s upgrade timeout, please check file, use a replacement policy and convert it manually\033[0m" % (path))

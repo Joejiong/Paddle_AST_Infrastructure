@@ -22,6 +22,8 @@ CUR_FOLDER=$(dirname $(readlink -f "$0"))
 COUNTER_OUTPUT_PATH_ORI="${CUR_FOLDER}/api_upgrade_src/dict/counter_output.dict"
 echo "curent folder : ${COUNTER_OUTPUT_PATH_ORI}"
 
+cp "${CUR_FOLDER}/api_upgrade_src/dict/counter.dict" "${CUR_FOLDER}/api_upgrade_src/dict/counter_output.dict"
+
 if [ -d ${INPUT} ]
 then
   if [ ! -d ${UPGRADE_MDL} ]; then

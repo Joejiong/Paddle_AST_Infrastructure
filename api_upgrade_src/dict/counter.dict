@@ -2151,6 +2151,9 @@
     "paddle.fluid.param_attr.ParamAttr":{"count": 0},
     "paddle.fluid.dygraph.base.to_variable":{"count": 0},
     "paddle.fluid.dygraph.parallel.prepare_context":{"count": 0},
-    "paddle.fluid.dygraph.parallel.DataParallel":{"count": 0}
-
+    "paddle.fluid.dygraph.parallel.DataParallel":{"count": 0},
+    "paddle.fluid.dygraph.Sequential": {
+        "name":"paddle.nn.Sequential", 
+        "count": 0
+    }
 }

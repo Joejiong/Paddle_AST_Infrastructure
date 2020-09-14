@@ -27,7 +27,7 @@ COUNTER_OUTPUT_PATH_ORI = SysPaths.COUNTER_OUTPUT_PATH_ORI
 # COUNTER_OUTPUT_PATH_ORI = cwd_prefix + '/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
 
 
-SUFFIX_LIST=['.py', '.sh', '.yaml', '.md', '.yapf', 'gitignore', '.yml', '.gitmodules', '.clang-format', '.hook']
+SUFFIX_LIST=['.py', '.sh', '.yaml', '.md', '.yapf', 'gitignore', '.yml']
 
 def load_replace_dict(dict_file): 
     """
