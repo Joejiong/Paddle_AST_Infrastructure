@@ -57,9 +57,8 @@ coverage.xml
 
 #log
 */log/
-/log/
+*/log/*.txt
 
 #dict
-/dict/counter_output.dict
-./api_upgrade_src/dict/new_counter_output.dict
-./api_upgrade_src/dict/new_counter_output.dict
+*/dict/new_counter_output.dict
+*/dict/new_counter_output.dict
