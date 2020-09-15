@@ -13,7 +13,7 @@
 # limitations under the License.
 
 FILE_PATH = 'missing_api.txt'
-OUTPUT_PATH = 'missing_api.dict'
+OUTPUT_PATH = '../log/error_log.txt'
 uni_api_dict = {}
 
 with open(FILE_PATH) as fp:
