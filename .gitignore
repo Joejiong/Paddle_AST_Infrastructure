@@ -54,3 +54,6 @@ coverage.xml
 
 # mac related
 .DS_Store
+
+#log
+*/log/*

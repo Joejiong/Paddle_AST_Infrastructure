@@ -16,7 +16,7 @@
 
 import json
 
-json_file = './counter.dict'
+json_file = './new_counter.dict'
 
 # Working with buffered content
 jsonFile = open(json_file, "r") # Open the JSON file for reading

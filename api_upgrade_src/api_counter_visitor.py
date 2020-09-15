@@ -23,13 +23,13 @@ from api_upgrade_src.upgrade_models_api_utils import load_counter_dict
 from api_upgrade_src.upgrade_models_api_utils import save_counter_dict
 from api_upgrade_src.common.Paths import SysPaths
 
-COUNTER_DICT_PATH = './api_upgrade_src/dict/counter.dict'
+COUNTER_DICT_PATH = './api_upgrade_src/dict/new_counter.dict'
 COUNTER_OUTPUT_PATH_ORI = SysPaths.COUNTER_OUTPUT_PATH_ORI
 
 # TODO(get general path before shell copy the tool)
 # cwd = os.getcwd()
-# cwd_prefix = "/".join([item for item in cwd.split('/') if item not in ["PaddleASTInfrastructure", "paddle_api_upgrade", "api_upgrade_src", "dict", "counter_output.dict"]])
-# COUNTER_OUTPUT_PATH_ORI = cwd_prefix + '/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+# cwd_prefix = "/".join([item for item in cwd.split('/') if item not in ["PaddleASTInfrastructure", "paddle_api_upgrade", "api_upgrade_src", "dict", "new_counter_output.dict"]])
+# COUNTER_OUTPUT_PATH_ORI = cwd_prefix + '/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/new_counter_output.dict'
 
 
 

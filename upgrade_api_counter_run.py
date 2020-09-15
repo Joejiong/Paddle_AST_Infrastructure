@@ -251,7 +251,7 @@ if __name__ == "__main__":
     upgrade_api_args = {"modify_dict": "./api_upgrade_src/dict/modify.dict", 
                         "args_file": "./api_upgrade_src/conf/upgrade.conf", 
                         "delete_dict": "./api_upgrade_src/dict/delete.dict",
-                        "counter_dict": "./api_upgrade_src/dict/counter.dict"}
+                        "counter_dict": "./api_upgrade_src/dict/new_counter.dict"}
     
     _config_dict = load_config(upgrade_api_args["args_file"])
     SysPaths.COUNTER_OUTPUT_PATH_ORI = _config_dict["counter_path"]

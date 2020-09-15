@@ -15,7 +15,7 @@
 import os
 # from api_upgrade_src.upgrade_models_api_utils import load_config
 
-CONFIGURE_PATH = "./api_upgrade_src/dict/counter.dict"
+CONFIGURE_PATH = "./api_upgrade_src/dict/new_counter.dict"
 
 def load_config(conf_file): 
     conf_dict = {"input_path": None, "output_path": None, "counter_path": None}
@@ -35,4 +35,4 @@ _config_dict = load_config(CONFIGURE_PATH)
 
 class SysPaths:
     # COUNTER_OUTPUT_PATH_ORI = _config_dict["counter_path"]
-    COUNTER_OUTPUT_PATH_ORI = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/counter_output.dict'
+    COUNTER_OUTPUT_PATH_ORI = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/new_counter_output.dict'
