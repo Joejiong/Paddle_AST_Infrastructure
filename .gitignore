@@ -56,4 +56,10 @@ coverage.xml
 .DS_Store
 
 #log
-*/log/*
+*/log/
+/log/
+
+#dict
+/dict/counter_output.dict
+./api_upgrade_src/dict/new_counter_output.dict
+./api_upgrade_src/dict/new_counter_output.dict
