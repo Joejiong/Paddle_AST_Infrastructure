@@ -1,5 +1,8 @@
 English | [简体中文](./README.md)
 
+## Introduction
+Paddle_AST_Infrastructure provide basic AST modules for paddle models and repos, it provides tools to traverse any paddle file or any given paddle models folder, and it could composite several modules together to achieve AST related tasks. One could construct task director such as code reformer, API_Call_Counter, PaddleUpgrader, PyTorch2Paddle and also X2Paddle AST transformers.
+
 ## Environment Dependence：
 1. python >=3.6
 2. Third library: gast >=0.3.3
