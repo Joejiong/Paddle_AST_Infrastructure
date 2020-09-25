@@ -45,7 +45,10 @@ LOGGING_PATH = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgra
 logger = logging.getLogger("API_COUNTER_LOGGOR")
 logger.setLevel(level=logging.INFO)
 filehandler = logging.FileHandler(LOGGING_PATH, mode='w')
+
+# TODO: toggle format for nice view in logger
 # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 formatter = logging.Formatter('%(message)s')
 
 filehandler.setFormatter(formatter)
@@ -109,8 +112,6 @@ def transformer_root(root, modify_dict):
     RepAttributeTransformer(root).replace(modify_dict)
     return root
 
-# def transformer_file(upgrade_config_dict, input, modify_dict=None, is_dir=False, counter_dict=None):
-#  
 def transformer_file(upgrade_config_dict, input, modify_dict=None, is_dir=False):
     input = os.path.normpath(input)
     (dirpath, filename) = os.path.split(input)
