@@ -248,7 +248,7 @@ def main(upgrade_api_args):
 
 
 if __name__ == "__main__": 
-    upgrade_api_args = {"modify_dict": "./api_upgrade_src/dict/modify.dict", 
+    upgrade_api_args = {"modify_dict": "./api_upgrade_src/dict/new_counter.dict", 
                         "args_file": "./api_upgrade_src/conf/upgrade.conf", 
                         "delete_dict": "./api_upgrade_src/dict/delete.dict",
                         "counter_dict": "./api_upgrade_src/dict/new_counter.dict"}
