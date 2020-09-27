@@ -38,24 +38,46 @@ from api_upgrade_src.import_transformer import ImportVisitor
 from api_upgrade_src.from_count_transformer import FromCountVisitor
 from api_upgrade_src.api_counter_visitor import APICountVisitor
 from api_upgrade_src.common.Paths import SysPaths
+from api_upgrade_src.common.Color import bcolors
 
 
-LOGGING_PATH = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/log/error_log.txt'
-
+# LOGGING_PATH = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/log/error_log.txt'
+LOGGING_PATH = "/".join(item for item in SysPaths.C_tmp.split('/')[:-2]) + '/log/error_log.txt'
 logger = logging.getLogger("API_COUNTER_LOGGOR")
-logger.setLevel(level=logging.INFO)
-filehandler = logging.FileHandler(LOGGING_PATH, mode='w')
-
-# TODO: toggle format for nice view in logger
-# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-formatter = logging.Formatter('%(message)s')
-
-filehandler.setFormatter(formatter)
-logger.addHandler(filehandler)
 
 
 BUILD_IN_FUN = dir(__builtins__)
+
+
+def set_up_logger(set_format=False):
+    
+    print("LOGGING_PATH: ",LOGGING_PATH)
+
+    logger.setLevel(level=logging.INFO)
+    filehandler = logging.FileHandler(LOGGING_PATH, mode='w')
+    
+    # Optional handler:
+    if set_format: 
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    
+    formatter = logging.Formatter('%(message)s')
+    filehandler.setFormatter(formatter)
+    logger.addHandler(filehandler)
+    return 
+
+def set_up_path(upgrade_api_args):
+    global LOGGING_PATH
+    if not upgrade_api_args.get("args_file", None): 
+        print("\033[1;34mPlease set config file!! Default path is api_upgrade_src/conf/upgrade.conf\033[0m")
+        exit(1)
+
+    upgrade_config_dict = load_config(upgrade_api_args["args_file"])
+    print("counter_path: ", upgrade_config_dict["counter_path"])
+    SysPaths.C_tmp = upgrade_config_dict["counter_path"]
+    
+    print('SysPaths.C_tmp: ', SysPaths.C_tmp)
+    LOGGING_PATH = "/".join(item for item in SysPaths.C_tmp.split('/')[:-2]) + '/log/error_log.txt'
+    print('LOGGING_PATH in side set up', LOGGING_PATH)
 
 
 def scan_module_import(root):
@@ -160,13 +182,13 @@ def transformer_file(upgrade_config_dict, input, modify_dict=None, is_dir=False)
 
     size = os.path.getsize(input)
     print_info("\033[1;34mStart upgrading model %s\033[0m" % (input))
-    # print("cool")
     if size != 0: 
         try: 
             root = gast.parse(inspect.getsource(mdl_inst))
             from_count_visitor = FromCountVisitor(root)
             from_count_visitor.visit(root)
             future_count = from_count_visitor.from_import_count
+            # comment for debug
             # print_info("\033[1;34mfuture count is %s \033[0m" % (future_count))
 
             insert_import_module_with_postion(root, mdl_name="paddle", pos=future_count)
@@ -224,6 +246,7 @@ def main(upgrade_api_args):
                         try: 
                             transformer_file(upgrade_config_dict, path, modify_dict, is_dir=True)
                         except Exception as e: 
+                            # comment for debugger
                             # logger.info("\033[1;31m %s upgrade error, please check file, use a replacement policy and convert it manually, with error: %s. \033[0m" % (path, e))
                             print_info("\033[1;31m %s upgrade error, please check file, use a replacement policy and convert it manually, with error: %s. \033[0m" % (path, e))
                 except: 
@@ -254,8 +277,8 @@ if __name__ == "__main__":
                         "delete_dict": "./api_upgrade_src/dict/delete.dict",
                         "counter_dict": "./api_upgrade_src/dict/new_counter.dict"}
     
-    _config_dict = load_config(upgrade_api_args["args_file"])
-    SysPaths.COUNTER_OUTPUT_PATH_ORI = _config_dict["counter_path"]
+    set_up_path(upgrade_api_args)
+    set_up_logger(set_format=False)
     main(upgrade_api_args)
 
 
