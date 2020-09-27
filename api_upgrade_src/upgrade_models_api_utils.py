@@ -17,8 +17,6 @@ import os
 import re
 from api_upgrade_src.common.Paths import SysPaths
 
-COUNTER_INPUT_PATH = './api_upgrade_src/dict/new_counter.dict'
-COUNTER_OUTPUT_PATH = './api_upgrade_src/dict/new_counter_output.dict'
 COUNTER_OUTPUT_PATH_ORI = SysPaths.COUNTER_OUTPUT_PATH_ORI
 
 # TODO(get general path before shell copy the tool)
