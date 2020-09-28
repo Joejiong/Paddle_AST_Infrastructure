@@ -29,7 +29,7 @@ class SysPaths:
 class SysPaths_dynamic:
     def __init__(self):
         self.C_tmp_dynamic = ""
-        COUNTER_OUTPUT_PATH_ORI = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/dict/new_counter_output.dict'
+        COUNTER_OUTPUT_PATH_ORI = ''
 
     def set_C_tmp_dynamic(self, path):
         self.C_tmp_dynamic = path
@@ -49,9 +49,8 @@ class SysPaths_dynamic:
                     conf_dict["counter_path"] = line.split("=")[1].strip()
         return conf_dict
 
-
 _config_dict = SysPaths_dynamic().load_config(CONFIGURE_PATH)
-print(">>>>>>>>>>>>>>>>>_config_dict>>>>>>>>>>>>>>>>>>>", _config_dict)
+print(">>>>>>>>>>>>>>>>>>>>>_config_dict>>>>>>>>>>>>>>>>>>>", _config_dict)
 s = SysPaths_dynamic()
 s.set_C_tmp_dynamic(_config_dict['counter_path'])
 print(">>>>>>>>>>>>>>>>>>>>SysPaths_dynamic>>>>>>>>>>>>>>>>", s.C_tmp_dynamic)
