@@ -41,7 +41,6 @@ from api_upgrade_src.common.Paths import SysPaths
 from api_upgrade_src.common.Color import bcolors
 
 
-# LOGGING_PATH = '/work/debug/PaddleASTInfrastructure/paddle_api_upgrade/api_upgrade_src/log/error_log.txt'
 LOGGING_PATH = "/".join(item for item in SysPaths.C_tmp.split('/')[:-2]) + '/log/error_log.txt'
 logger = logging.getLogger("API_COUNTER_LOGGOR")
 
