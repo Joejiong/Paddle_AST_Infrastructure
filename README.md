@@ -86,7 +86,7 @@ test description: cd test run
 ## TODO and Problems:
 - code refactory
 - general path inference
-- auto bath git cloner
+- auto path git cloner
 
 ## Acknowledgement
 PaddleASTInfrastructure refers to the following projects:
