@@ -63,3 +63,6 @@ coverage.xml
 */dict/new_counter_output.dict
 */dict/new_counter_output.dict
 *output.dict
+
+#tools
+clone.txt
