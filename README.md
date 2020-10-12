@@ -111,3 +111,7 @@ PaddleASTInfrastructure refers to the following projects:
 - https://github.com/ysh329/deep-learning-model-convertor
 
 
+## License
+This library is released under the Apache 2.0 license.
+
+
