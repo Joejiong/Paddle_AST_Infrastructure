@@ -6,7 +6,7 @@ English | [简体中文](./README.zh.md)
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
 ![python version](https://img.shields.io/badge/python-3.6+-orange.svg)
 ![support os](https://img.shields.io/badge/os-linux%2C%2C%20mac-yellow.svg)
-[Documentation Status](https://img.shields.io/badge/中文文档-最新-brightgreen.svg)](./README.zh.md)  [![Release]
+ [![Documentation Status](https://img.shields.io/badge/中文文档-最新-brightgreen.svg)](./README.zh.md) 
 
 ## Introduction
 Paddle_AST_Infrastructure provide basic AST modules for paddle models and repos, it provides tools to traverse any paddle file or any given paddle models folder, and it could composite several modules together to achieve AST related tasks. One could construct task director such as code reformer, API_Call_Counter, PaddleUpgrader, PyTorch2Paddle and also X2Paddle AST transformers.
