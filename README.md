@@ -43,6 +43,14 @@ Paddle_AST_Infrastructure provide basic AST modules for paddle models and repos,
  configuration file.
 ```
 ## How to Use：
+### For API Call Counter:
+you need to first use the tool to define rules to download certain repos to analysis.
+then you can do the following.
+```
+cd api_upgrade_src
+sh run_counter.sh input output # for non-mac users
+```
+
 caveats: if input is a directory, please make sure that files under the directory are well working;
 ```
 cd paddle_api_upgrade
