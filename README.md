@@ -121,6 +121,6 @@ PaddleASTInfrastructure refers to the following projects:
 
 
 ## License
-This library is released under the Apache 2.0 license.
+This library is released under the [Apache 2.0 license](LICENSE).
 
 
