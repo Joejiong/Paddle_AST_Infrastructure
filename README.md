@@ -118,7 +118,9 @@ PaddleASTInfrastructure refers to the following projects:
 - MIIR
 ##### Survey on model converters
 - https://github.com/ysh329/deep-learning-model-convertor
-
+##### Interesting NN_Compiler papers:
+- [DLVM: A MODERN COMPILER INFRASTRUCTURE FOR
+DEEP LEARNING SYSTEMS](https://openreview.net/pdf?id=ryG6xZ-RZ)
 
 ## License
 This library is released under the [Apache 2.0 license](LICENSE).
