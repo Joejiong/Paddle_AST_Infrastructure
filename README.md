@@ -115,7 +115,7 @@ PaddleASTInfrastructure refers to the following projects:
 - CINN
 - TVM
 - XLA
-- MIIR
+- MLIR
 ##### Survey on model converters
 - https://github.com/ysh329/deep-learning-model-convertor
 ##### Interesting NN_Compiler papers:
