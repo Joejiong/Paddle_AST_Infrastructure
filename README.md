@@ -20,7 +20,7 @@ Paddle_AST_Infrastructure provide basic AST modules for paddle models and repos,
 6. shell tool: rsync replace commands for cp
 
 ## Project Design
-1. with AST parsing, we manage to upgrade PaddlePaddle API, so while upgrading **firstly, we have to make sure the code is well working** , currently we support the following use operations.
+1. with AST parsing, we manage to upgrade PaddlePaddle API, so while upgrading **firstly, we have to make sure the code is well working** , currently we support the following use case.
 	- replace api by name，e,g: paddle.fluid.data-->paddle.data;
 	- modification api: API AST CRUD;
 	- replace full name, e,g: self.q_fc = Linear-->self.q_fc = paddle.fluid.dygraph.Linear.
